@@ -1,8 +1,16 @@
 import './index.css'
+
 import ReactDOM from 'react-dom'
 import React from 'react'
 
-const tag = <strong>ReactJS</strong>
+import Primeiro from './components/basics/Primeiro'
+import ComParametro from './components/basics/ComParametro'
 
+// const tag = <strong>ReactJS</strong>
 
-ReactDOM.render(<div>{tag}</div>, document.querySelector('#root'))
+ReactDOM.render(
+  <main>
+    <Primeiro />
+    <ComParametro titulo="Situação do aluno" nota={3.9} nome="João" />
+  </main>,
+  document.querySelector('#root'))
