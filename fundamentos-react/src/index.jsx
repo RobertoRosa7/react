@@ -5,6 +5,7 @@ import React from 'react'
 
 import ComParametro from './components/basics/ComParametro'
 import Primeiro from './components/basics/Primeiro'
+import Fragmento from './components/basics/Fragmento'
 
 const user = {
   "nome":"Roberto",
@@ -44,5 +45,6 @@ ReactDOM.render(
   <main>
     <Primeiro />
     <ComParametro user={user} />
+    <Fragmento />
   </main>,
   document.querySelector('#root'))
