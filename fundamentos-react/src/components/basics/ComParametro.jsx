@@ -5,7 +5,7 @@ import React from 'react'
 export default function ComParamentro(props) {
   return (
     <section className="com-parametro">
-      <h1>Component com paramentro - dados de aluno</h1>
+      <h2>Component com paramentro - dados de aluno</h2>
       <div className="card">
         <p><span>Nome: </span>{props.user.nome}</p>
         <p><span>Sobrenome: </span>{props.user.sobrenome}</p>
