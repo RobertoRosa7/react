@@ -1,0 +1,21 @@
+.com-parametro .card {
+  font-size: 0.8em;
+}
+.com-parametro .card p {
+  padding: 3px 0;
+  text-transform: capitalize;
+}
+.com-parametro .card p span {
+  font-weight: 600;
+}
+.com-parametro .media-social {
+  display: flex;
+}
+.com-parametro .media-social a{
+  text-decoration: none;
+  padding: 5px;
+  border: 1px solid #888888;
+  color: #333;
+  margin-left: 0;
+  margin-right: 5px;
+}
