@@ -1,8 +1,10 @@
+import "./App.css";
 import React from "react";
 import ComParametro from "./components/basics/ComParametro";
 import Primeiro from "./components/basics/Primeiro";
 import Fragmento from "./components/basics/Fragmento";
 import Aleatorio from "./components/basics/Aleatorio";
+import Card from "./components/layout/Card";
 
 const user = {
   nome: "Roberto",
@@ -38,11 +40,21 @@ const user = {
   ],
 };
 export default () => (
-  <main>
+  <main className="app">
     <h2>Fundamentos React!</h2>
-    <Aleatorio min={0} max={100} />
-    <Fragmento />
-    <ComParametro user={user} />
-    <Primeiro />
+    <div className="app-container">
+      <Card titulo="#4 Desafio aleatório!">
+        <Aleatorio min={0} max={100} />
+      </Card>
+      <Card titulo="#3 Fragmento">
+        <Fragmento />
+      </Card>
+      <Card titulo="#2 Primeiro component com paramentro">
+        <ComParametro user={user} />
+      </Card>
+      <Card titulo="#1 Primeiro component">
+        <Primeiro />
+      </Card>
+    </div>
   </main>
 );
