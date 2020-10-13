@@ -1,14 +1,15 @@
 .cards {
-  background-color: white;
+  background-color:#FFF;
   padding: 10px;
   margin: 15px 0;
   display: flex;
   flex-direction: column;
-  min-width: 300px;
-  max-width: 320px;
+  max-width: 300px;
+  width: 100%;
+  min-height: 250px;
+  box-shadow: 0 0 15px 1px rgba(0,0,0,0.3);
 }
 .cards .title {
-  background-color: inherit;
   text-transform: uppercase;
   font-size: 18px;
   padding: 8px 0;
@@ -21,7 +22,8 @@
   color: #333;
   display: flex;
   justify-content: flex-start;
-  background-color: whitesmoke;
   padding: 8px 0;
-  flex-grow: 1
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
 }
