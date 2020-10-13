@@ -7,6 +7,7 @@ import Aleatorio from "./components/basics/Aleatorio";
 import Card from "./components/layout/Card";
 import Familia from "./components/basics/Familia";
 import FamiliaMembro from "./components/basics/FamiliaMembros";
+import ListaAlunos from "./components/listas/ListaAlunos";
 
 const user = {
   nome: "Roberto",
@@ -45,23 +46,26 @@ export default () => (
   <main className="app">
     <h2>Fundamentos React!</h2>
     <div className="app-container">
-      <Card titulo="#5 - Componente com Filhos" color="#34495E">
+      <Card titulo="#06 - Repetição" color="#BA4A00">
+        <ListaAlunos></ListaAlunos>
+      </Card>
+      <Card titulo="#05 - Componente com Filhos" color="#34495E">
         <Familia sobrenome="Rosa">
-          <FamiliaMembro nome="Jamie"/>
-          <FamiliaMembro nome="Clair"/>
-          <FamiliaMembro nome="Brianne"/>
+          <FamiliaMembro nome="Jamie" />
+          <FamiliaMembro nome="Clair" />
+          <FamiliaMembro nome="Brianne" />
         </Familia>
       </Card>
-      <Card titulo="#4 - Desafio aleatório!" color="#BA4A00">
+      <Card titulo="#04 - Desafio aleatório!" color="#BA4A00">
         <Aleatorio min={0} max={100} />
       </Card>
-      <Card titulo="#3 - Fragmento" color="#28B463">
+      <Card titulo="#03 - Fragmento" color="#28B463">
         <Fragmento />
       </Card>
-      <Card titulo="#2 - Primeiro component com paramentro" color="#CB4335">
+      <Card titulo="#02 - Primeiro component com paramentro" color="#CB4335">
         <ComParametro user={user} />
       </Card>
-      <Card titulo="#1 - Primeiro component" color="#7D3C98">
+      <Card titulo="#01 - Primeiro component" color="#7D3C98">
         <Primeiro />
       </Card>
     </div>
