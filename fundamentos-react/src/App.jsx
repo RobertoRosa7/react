@@ -6,6 +6,7 @@ import Fragmento from "./components/basics/Fragmento";
 import Aleatorio from "./components/basics/Aleatorio";
 import Card from "./components/layout/Card";
 import Familia from "./components/basics/Familia";
+import FamiliaMembro from "./components/basics/FamiliaMembros";
 
 const user = {
   nome: "Roberto",
@@ -45,7 +46,11 @@ export default () => (
     <h2>Fundamentos React!</h2>
     <div className="app-container">
       <Card titulo="#5 - Componente com Filhos" color="#34495E">
-        <Familia />
+        <Familia sobrenome="Rosa">
+          <FamiliaMembro nome="Jamie"/>
+          <FamiliaMembro nome="Clair"/>
+          <FamiliaMembro nome="Brianne"/>
+        </Familia>
       </Card>
       <Card titulo="#4 - Desafio aleatório!" color="#BA4A00">
         <Aleatorio min={0} max={100} />
