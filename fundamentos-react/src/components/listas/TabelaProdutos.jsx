@@ -8,7 +8,7 @@ export default (props) => {
     whiteSpace:'nowrap'
   }
   const tables = produtos.map((value, index) => (
-    <tr key={index} style={{background: index % 2 == 0 ? '#ddd' : '', fontSize: '14px'}}>
+    <tr key={index} style={{background: index % 2 === 0 ? '#ddd' : '', fontSize: '14px'}}>
       <td>{value.id}</td>
       <td style={truncate}>{value.nome}</td>
       <td>

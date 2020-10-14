@@ -13,11 +13,15 @@ import ParOuImpar from "./components/condicional/ParOuImpar";
 import { user } from "./data/user";
 import UsuarioInfo from "./components/condicional/UsuarioInfo";
 import ComunicacaoDireta from "./components/comunicacao/ComunicacaoDireta";
+import ComunicacaoIndireta from "./components/comunicacao/ComunicacaoIndireta";
 
 export default () => (
   <div className="app">
     <div className="titulo">Fundamentos React!</div>
     <div className="app-container">
+      <Card titulo="#10 - Comunicação Indireta" color="#34495E">
+        <ComunicacaoIndireta />
+      </Card>
       <Card titulo="#09 - Comunicação Direta" color="#CB4335">
         <ComunicacaoDireta></ComunicacaoDireta>
       </Card>
