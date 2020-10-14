@@ -8,6 +8,7 @@ import Card from "./components/layout/Card";
 import Familia from "./components/basics/Familia";
 import FamiliaMembro from "./components/basics/FamiliaMembros";
 import ListaAlunos from "./components/listas/ListaAlunos";
+import TabelaProdutos from "./components/listas/TabelaProdutos";
 
 const user = {
   nome: "Roberto",
@@ -43,9 +44,12 @@ const user = {
   ],
 };
 export default () => (
-  <main className="app">
-    <h2>Fundamentos React!</h2>
+  <div className="app">
+    <div>Fundamentos React!</div>
     <div className="app-container">
+      <Card titulo="#07 - Tabela de Produtos" color="#7D3C98">
+        <TabelaProdutos />
+      </Card>
       <Card titulo="#06 - Repetição" color="#BA4A00">
         <ListaAlunos></ListaAlunos>
       </Card>
@@ -69,5 +73,5 @@ export default () => (
         <Primeiro />
       </Card>
     </div>
-  </main>
+  </div>
 );

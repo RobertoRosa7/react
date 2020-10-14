@@ -3,11 +3,11 @@ import alunos from "../../data/alunos";
 
 export default (props) => {
   const lis = alunos.map((aluno, index) => (
-    <span key={index} style={{display:'block'}}>
+    <div key={index} style={{display:'block'}}>
       {aluno.id}) - {aluno.nome}: {aluno.nota}
-    </span>
+    </div>
   ));
 
   
-  return <span>{lis}</span>;
+  return <div>{lis}</div>;
 };

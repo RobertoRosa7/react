@@ -8,8 +8,8 @@ export default (props) => {
   }
   return (
     <div className="cards">
-      <h1 className="title" style={styles}>{props.titulo}</h1>
-      <p className="content">{props.children}</p>
+      <div className="title" style={styles}>{props.titulo}</div>
+      <div className="content">{props.children}</div>
     </div>
   );
 };

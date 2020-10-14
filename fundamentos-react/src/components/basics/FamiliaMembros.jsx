@@ -6,9 +6,9 @@ export default (props) => {
     width:'100%'
   }
   return (
-    <span style={membros}>
-      <span style={membros}>Nome: {props.nome}</span>
-      <span style={membros}>Sobrenome: <strong>{props.sobrenome}</strong></span>
-    </span>
+    <div style={membros}>
+      <div style={membros}>Nome: {props.nome}</div>
+      <div style={membros}>Sobrenome: <div>{props.sobrenome}</div></div>
+    </div>
   );
 };

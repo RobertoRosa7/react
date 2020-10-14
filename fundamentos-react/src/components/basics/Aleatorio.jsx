@@ -9,10 +9,10 @@ export default (props) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
   return (
-    <span className="aleatorio-number">
-      <span>min: {props.min}</span>
-      <span>max: {props.max}</span>
-      <span>Número de hoje é: {number}</span>
-    </span>
+    <div className="aleatorio-number">
+      <div>min: {props.min}</div>
+      <div>max: {props.max}</div>
+      <div>Número de hoje é: {number}</div>
+    </div>
   );
 };

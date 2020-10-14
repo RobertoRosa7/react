@@ -4,16 +4,16 @@ import React from 'react'
 
 export default function ComParamentro(props) {
   return (
-    <span className="com-parametro">
-      <span className="card">
-        <span><span>Nome: </span>{props.user.nome}</span>
-        <span><span>Sobrenome: </span>{props.user.sobrenome}</span>
-        <span><span>Apelido: </span>{props.user.apelido}</span>
-        <span><span>Idade: </span>{props.user.idade}</span>
-        <span><span>Sexo: </span>{props.user.sexo}</span>
-        <span><span>Universidade: </span>{props.user.instituicao_ensino}</span>
-        <span><span>Profissão: </span>{props.user.profissao}</span>
-        <span className="media-social">
+    <div className="com-parametro">
+      <div className="card">
+        <div><div>Nome: </div>{props.user.nome}</div>
+        <div><div>Sobrenome: </div>{props.user.sobrenome}</div>
+        <div><div>Apelido: </div>{props.user.apelido}</div>
+        <div><div>Idade: </div>{props.user.idade}</div>
+        <div><div>Sexo: </div>{props.user.sexo}</div>
+        <div><div>Universidade: </div>{props.user.instituicao_ensino}</div>
+        <div><div>Profissão: </div>{props.user.profissao}</div>
+        <div className="media-social">
           {
             props.user.media_social.map((element, index) => {
               return (
@@ -21,8 +21,8 @@ export default function ComParamentro(props) {
               )
             })
           }
-        </span>
-      </span>
-    </span>
+        </div>
+      </div>
+    </div>
   )
 }

@@ -2,7 +2,7 @@ import React from "react";
 
 export default (props) => {
   return (
-    <span>
+    <div>
       {/* método simples  */}
       {/* <FamiliaMembro nome="Jamie" sobrenome={props.sobrenome}/> */}
       {/* <FamiliaMembro nome="Claire" {...props}/> */}
@@ -18,6 +18,6 @@ export default (props) => {
       {React.Children.map(props.children, (child) =>
         React.cloneElement(child, props)
       )}
-    </span>
+    </div>
   );
 };
