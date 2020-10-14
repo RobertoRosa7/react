@@ -10,16 +10,20 @@ import FamiliaMembro from "./components/basics/FamiliaMembros";
 import ListaAlunos from "./components/listas/ListaAlunos";
 import TabelaProdutos from "./components/listas/TabelaProdutos";
 import ParOuImpar from "./components/condicional/ParOuImpar";
-import { user } from './data/user'
+import { user } from "./data/user";
 import UsuarioInfo from "./components/condicional/UsuarioInfo";
+import ComunicacaoDireta from "./components/comunicacao/ComunicacaoDireta";
 
 export default () => (
   <div className="app">
-    <div>Fundamentos React!</div>
+    <div className="titulo">Fundamentos React!</div>
     <div className="app-container">
+      <Card titulo="#09 - Comunicação Direta" color="#CB4335">
+        <ComunicacaoDireta></ComunicacaoDireta>
+      </Card>
       <Card titulo="#08 - Condicional" color="#28B463">
-        <ParOuImpar number={20}/>
-        <UsuarioInfo user={user} ></UsuarioInfo>
+        <ParOuImpar number={20} />
+        <UsuarioInfo user={user}></UsuarioInfo>
       </Card>
       <Card titulo="#07 - Tabela de Produtos" color="#7D3C98">
         <TabelaProdutos />

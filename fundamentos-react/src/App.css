@@ -8,3 +8,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+.app .titulo {
+  font-size: 45px;
+  text-align: center;
+}
