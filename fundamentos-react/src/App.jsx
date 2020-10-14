@@ -14,11 +14,15 @@ import { user } from "./data/user";
 import UsuarioInfo from "./components/condicional/UsuarioInfo";
 import ComunicacaoDireta from "./components/comunicacao/ComunicacaoDireta";
 import ComunicacaoIndireta from "./components/comunicacao/ComunicacaoIndireta";
+import Input from "./components/formulario/input";
 
 export default () => (
   <div className="app">
     <div className="titulo">Fundamentos React!</div>
     <div className="app-container">
+      <Card titulo="#11 - Component controlado" color="#BA4A00">
+        <Input></Input>
+      </Card>
       <Card titulo="#10 - Comunicação Indireta" color="#34495E">
         <ComunicacaoIndireta />
       </Card>
