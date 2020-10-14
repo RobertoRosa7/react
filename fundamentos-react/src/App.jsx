@@ -9,44 +9,16 @@ import Familia from "./components/basics/Familia";
 import FamiliaMembro from "./components/basics/FamiliaMembros";
 import ListaAlunos from "./components/listas/ListaAlunos";
 import TabelaProdutos from "./components/listas/TabelaProdutos";
+import ParOuImpar from "./components/condicional/ParOuImpar";
+import { user } from './data/user'
 
-const user = {
-  nome: "Roberto",
-  sobrenome: "Rosa da Silva",
-  apelido: "beto",
-  idade: 32,
-  sexo: "Masculino",
-  instituicao_ensino: "Universidade nove de Julhos",
-  altura: 1.75,
-  cor: "Branco",
-  biotipo: "Magro",
-  profissao: "Desenvolvedor de Software",
-  foto: "#",
-  media_social: [
-    {
-      tipo: "facebook",
-      following: 0,
-      follower: 0,
-      url: "#",
-    },
-    {
-      tipo: "twitter",
-      following: 0,
-      follower: 0,
-      url: "#",
-    },
-    {
-      tipo: "instagram",
-      following: 0,
-      follower: 0,
-      url: "#",
-    },
-  ],
-};
 export default () => (
   <div className="app">
     <div>Fundamentos React!</div>
     <div className="app-container">
+      <Card titulo="#08 - Condicional" color="#28B463">
+        <ParOuImpar number={20}/>
+      </Card>
       <Card titulo="#07 - Tabela de Produtos" color="#7D3C98">
         <TabelaProdutos />
       </Card>

@@ -1,12 +1,10 @@
 import React from "react";
 
 export default (props) => {
-  const number = getRandom(props.min, props.max);
+  const number = getRandom();
 
-  function getRandom(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+  function getRandom() {
+    return Math.floor(Math.random() * (Math.floor(props.max) - Math.ceil(props.min) + 1)) + props.min;
   }
   return (
     <div className="aleatorio-number">
