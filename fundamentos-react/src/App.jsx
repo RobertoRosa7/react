@@ -1,4 +1,5 @@
 import "./App.css";
+import { user } from "./data/user";
 import React from "react";
 import ComParametro from "./components/basics/ComParametro";
 import Primeiro from "./components/basics/Primeiro";
@@ -10,17 +11,20 @@ import FamiliaMembro from "./components/basics/FamiliaMembros";
 import ListaAlunos from "./components/listas/ListaAlunos";
 import TabelaProdutos from "./components/listas/TabelaProdutos";
 import ParOuImpar from "./components/condicional/ParOuImpar";
-import { user } from "./data/user";
 import UsuarioInfo from "./components/condicional/UsuarioInfo";
 import ComunicacaoDireta from "./components/comunicacao/ComunicacaoDireta";
 import ComunicacaoIndireta from "./components/comunicacao/ComunicacaoIndireta";
 import Input from "./components/formulario/input";
 import Contador from "./components/contador/Contador";
+import Mega from "./components/mega/Mega";
 
 export default () => (
   <div className="app">
     <div className="titulo">Fundamentos React!</div>
     <div className="app-container">
+      <Card titulo="#13 - Mega Sena" color="#CB4335">
+        <Mega />
+      </Card>
       <Card titulo="#12 - Contador" color="#7D3C98">
         <Contador numInicial={10} />
       </Card>
