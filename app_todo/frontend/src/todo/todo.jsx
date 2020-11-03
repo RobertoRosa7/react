@@ -15,6 +15,8 @@ export default class Todo extends React.Component {
     this.handleRemove = this.handleRemove.bind(this);
     this.handleMarkAsDone = this.handleMarkAsDone.bind(this);
     this.handleMarkAsPending = this.handleMarkAsPending.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
+    this.handleClear = this.handleClear.bing(this);
     this.refresh();
   }
 
@@ -25,25 +27,32 @@ export default class Todo extends React.Component {
   handleChange(e) {
     this.setState({ ...this.state, description: e.target.value });
   }
-  refresh() {
-    axios
-      .get(`${api}?sort=-createdAt`)
-      .then((res) =>
-        this.setState({ ...this.state, description: "", list: res.data })
-      );
+  refresh(description = "") {
+    const search = description ? `&description__regex=/${description}/` : "";
+    axios.get(`${api}?sort=-createdAt${search}`).then((res) => {
+      this.setState({ ...this.state, description, list: res.data });
+    });
   }
   handleRemove(todo) {
-    axios.delete(`${api}/${todo._id}`).then(() => this.refresh());
+    axios
+      .delete(`${api}/${todo._id}`)
+      .then(() => this.refresh(this.state.description));
   }
   handleMarkAsDone(todo) {
     axios
       .put(`${api}/${todo._id}`, { ...todo, done: true })
-      .then(() => this.refresh());
+      .then(() => this.refresh(this.state.description));
   }
   handleMarkAsPending(todo) {
     axios
       .put(`${api}/${todo._id}`, { ...todo, done: false })
-      .then(() => this.refresh());
+      .then(() => this.refresh(this.state.description));
+  }
+  handleSearch() {
+    this.refresh(this.state.description);
+  }
+  handleClear() {
+    this.refresh();
   }
 
   render() {
@@ -53,6 +62,8 @@ export default class Todo extends React.Component {
         <TodoForm
           handleChange={this.handleChange}
           handleAdd={this.handleAdd}
+          handleSearch={this.handleSearch}
+          handleClear={this.handleClear}
           description={this.state.description}
         />
         <TodoList
