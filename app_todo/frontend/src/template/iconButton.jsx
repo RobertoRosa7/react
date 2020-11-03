@@ -1,13 +1,10 @@
 import React from "react";
+import If from "../template/if";
 
-export default (props) => {
-  if (props.hide) {
-    return null;
-  } else {
-    return (
-      <button onClick="props.onClick" className={"btn btn-" + props.style}>
-        <i className={"fa fa-" + props.icon}></i>
-      </button>
-    );
-  }
-};
+export default (props) => (
+  <If test={!props.hide}>
+    <button onClick={props.onClick} className={"btn btn-" + props.style}>
+      <i className={"fa fa-" + props.icon}></i>
+    </button>
+  </If>
+);
