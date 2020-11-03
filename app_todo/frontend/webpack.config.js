@@ -2,13 +2,13 @@ const webpack = require("webpack");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: "./src/index.jsx",
   output: {
     path: __dirname + "/public",
     filename: "./app.js",
   },
   devServer: {
-    port: 8080,
+    port: 8000,
     contentBase: "./public",
   },
   resolve: {
@@ -26,7 +26,7 @@ module.exports = {
         exclude: /node_modules/,
         query: {
           presets: ["es2015", "react"],
-          plugins: ["transform-object-react-spread"],
+          plugins: ["transform-object-rest-spread"],
         },
       },
       {
@@ -34,8 +34,8 @@ module.exports = {
         loader: ExtractTextPlugin.extract("style-loader", "css-loader"),
       },
       {
-        test: /\.woff|.woff2|.fft|.eot|.svg*.*$/,
-        looader: "file-loader",
+        test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,
+        loader: "file-loader",
       },
     ],
   },
