@@ -1,0 +1,5 @@
+.mark-as-done {
+  text-decoration: line-through;
+  color: #ccc;
+  opacity: 0.7;
+}
