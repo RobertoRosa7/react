@@ -1,8 +1,16 @@
-import './Media.css'
-import React from 'react'
+import "./Media.css";
+import React from "react";
+import Card from "../card/Card";
 
-export default function Media(props){
+export default function Media(props) {
   return (
-    <div>media</div>
-  )
+    <Card title="Média dos Números" green>
+      <div className="media">
+        <span>
+          <span>Resulta:</span>
+          <strong>5</strong>
+        </span>
+      </div>
+    </Card>
+  );
 }

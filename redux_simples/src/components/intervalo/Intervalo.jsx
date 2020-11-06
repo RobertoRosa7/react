@@ -4,7 +4,7 @@ import Card from "../card/Card";
 
 export default function Intervalo(props) {
   return (
-    <Card title="Intervalo de músicas" red>
+    <Card title="Intervalo de Números" red>
       <div className="intervalo">
         <span>
           <strong>Mínimo:</strong>
