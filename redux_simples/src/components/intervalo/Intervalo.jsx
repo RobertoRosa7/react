@@ -2,7 +2,7 @@ import "./intervalo.css";
 import React from "react";
 import Card from "../card/Card";
 import { connect } from "react-redux";
-import { actions } from "../../actions/numbers";
+import { changeNumMax, changeNumMin } from "../../actions/numbers";
 
 function Intervalo(props) {
   // const { min, max } = props; sem redux
@@ -45,11 +45,11 @@ function mapDispatchToProp(dispatch) {
   return {
     changeMin: function (n) {
       // action creator
-      const action = actions.changeNumMin(n);
+      const action = changeNumMin(n);
       dispatch(action);
     },
     changeMax: function (n) {
-      const action = actions.changeNumMax(n);
+      const action = changeNumMax(n);
       dispatch(action);
     },
   };
