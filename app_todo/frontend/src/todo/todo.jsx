@@ -68,7 +68,6 @@ export default class Todo extends React.Component {
           description={this.state.description}
         />
         <TodoList
-          list={this.state.list}
           handleRemove={this.handleRemove}
           handleMarkAsDone={this.handleMarkAsDone}
           handleMarkAsPending={this.handleMarkAsPending}

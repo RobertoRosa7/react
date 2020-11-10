@@ -1,15 +1,23 @@
 import React from "react";
 import IconButton from "../template/iconButton";
+import { connect } from 'react-redux'
 
-export default (props) => {
+const TodoList = (props) => {
   const renderRows = () => {
     const list = props.list || [];
 
     return list.map((todo) => (
       <tr key={todo._id}>
-        <td className={todo.done ? 'mark-as-done' : ''}>{todo.description}</td>
+        <td className={todo.done ? "mark-as-done" : ""}>{todo.description}</td>
         <td>
-          <div style={{display:'flex', justifyContent: 'space-between', maxWidth: '80px', marginLeft:'auto'}}>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              maxWidth: "80px",
+              marginLeft: "auto",
+            }}
+          >
             <IconButton
               hide={!todo.done}
               style="success"
@@ -45,3 +53,6 @@ export default (props) => {
     </table>
   );
 };
+
+const matStateToProps = (state) => ({ list: state.todo.list });
+export default connect(matStateToProps)(TodoList);
