@@ -11,3 +11,8 @@ export const search = () => ({
   type: "TODO_SEARCHED",
   payload: axios.get(`${API}?sort=-createdAt`),
 });
+
+export const add = (description) => ({
+  type: "TODO_ADDED",
+  payload: axios.post(API, { description }),
+});
