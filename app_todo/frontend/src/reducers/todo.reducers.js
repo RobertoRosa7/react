@@ -26,6 +26,11 @@ export default function TodoReducers(state = INITIAL_STATE, actions) {
         ...state,
         description: actions.payload,
       };
+    case "TODO_SEARCHED":
+      return {
+        ...state,
+        list: actions.payload.data,
+      };
     default:
       return state;
   }
