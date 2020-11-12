@@ -12,10 +12,18 @@ export const search = () => ({
   payload: axios.get(`${API}?sort=-createdAt`),
 });
 
-export const add = (description) => [
-  {
-    type: "TODO_ADDED",
-    payload: axios.post(API, { description }),
-  },
-  search(),
-];
+// sem middleware thunk
+// export const add = (description) => [
+//   {
+//     type: "TODO_ADDED",
+//     payload: axios.post(API, { description }),
+//   },
+//   search(),
+// ];
+
+// com middleware thunk
+export const add = (description) => (dispatch) =>
+  axios
+    .post(API, { description })
+    .then((res) => dispatch({ type: "TODO_ADDED", payload: res.data }))
+    .then((res) => dispatch(search()));
