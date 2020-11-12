@@ -7,10 +7,27 @@ export const changeDescription = (e) => ({
   payload: e.target.value,
 });
 
-export const search = () => ({
-  type: "TODO_SEARCHED",
-  payload: axios.get(`${API}?sort=-createdAt`),
-});
+// sem middleware thunk
+// export const search = (description) => ({
+//   type: "TODO_SEARCHED",
+//   payload: axios.get(
+//     `${API}?sort=-createdAt${
+//       description ? "&description__regex=/" + description + "/" : ""
+//     }`
+//   ),
+// });
+
+// com middleware thunk
+export const search = () => (dispatch, getState) =>
+  axios
+    .get(
+      `${API}?sort=-createdAt${
+        getState().todo.description
+          ? "&description__regex=/" + getState().todo.description + "/"
+          : ""
+      }`
+    )
+    .then((res) => dispatch({ type: "TODO_SEARCHED", payload: res.data }));
 
 // sem middleware thunk
 // export const add = (description) => [
@@ -25,5 +42,25 @@ export const search = () => ({
 export const add = (description) => (dispatch) =>
   axios
     .post(API, { description })
-    .then((res) => dispatch({ type: "TODO_ADDED", payload: res.data }))
-    .then((res) => dispatch(search()));
+    .then(() => dispatch(clear()))
+    .then(() => dispatch(search()));
+
+export const markAsDone = (todo) => (dispatch) =>
+  axios
+    .put(`${API}/${todo._id}`, { ...todo, done: true })
+    .then(() => dispatch(search()));
+
+export const markAsPending = (todo) => (dispatch) =>
+  axios
+    .put(`${API}/${todo._id}`, { ...todo, done: false })
+    .then(() => dispatch(search()));
+
+export const remove = (todo) => (dispatch) =>
+  axios.delete(`${API}/${todo._id}`).then(() => dispatch(search()));
+
+export const clear = () => [
+  {
+    type: "TODO_CLEAR",
+  },
+  search(),
+];

@@ -13,9 +13,9 @@ export default function TodoReducers(state = INITIAL_STATE, actions) {
     case "TODO_SEARCHED":
       return {
         ...state,
-        list: actions.payload.data,
+        list: actions.payload,
       };
-    case "TODO_ADDED":
+    case "TODO_CLEAR":
       return {
         ...state,
         description: "",
