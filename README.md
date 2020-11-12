@@ -13,5 +13,12 @@
 
 ###### 05/11/2020
 
+- [x] App Todo List
 - [x] Introdução ao Redux
-  - Entendendo o Redux
+- [x] Instalando as dependências
+- [x] Configurando os reducers
+- [x] Conectar o TodoList com Redux
+- [x] Action Creator
+- [x] Middleware - redux-promise
+- [x] Middleware - redux-multi
+- [x] Middleware - redux-thunk
