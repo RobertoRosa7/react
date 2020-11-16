@@ -22,3 +22,15 @@
 - [x] Middleware - redux-promise
 - [x] Middleware - redux-multi
 - [x] Middleware - redux-thunk
+
+###### 16/11/2020
+
+- [x] Novo Projeto My Money App
+- [x] Configurando Servidor com Express Módule
+- [x] Conexão com Banco de dados MongoDB
+- [x] Mapeamento Objeto-Documento (ODM)
+- [x] Criação da API Rest
+- [x] HTTP Methods `GET POST PUT DELETE OPTION PATCH`
+- [x] Mapeamento de Rotas
+- [x] Habilitando CORS
+- [x] Middleware
