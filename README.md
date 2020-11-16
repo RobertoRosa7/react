@@ -31,6 +31,6 @@
 - [x] Mapeamento Objeto-Documento (ODM)
 - [x] Criação da API Rest
 - [x] HTTP Methods `GET POST PUT DELETE OPTION PATCH`
-- [ ] Mapeamento de Rotas
+- [x] Mapeamento de Rotas
 - [ ] Habilitando CORS
 - [ ] Middleware
