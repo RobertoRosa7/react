@@ -28,7 +28,7 @@
 - [x] Novo Projeto My Money App
 - [x] Configurando Servidor com Express Módule
 - [x] Conexão com Banco de dados MongoDB
-- [ ] Mapeamento Objeto-Documento (ODM)
+- [x] Mapeamento Objeto-Documento (ODM)
 - [ ] Criação da API Rest
 - [ ] HTTP Methods `GET POST PUT DELETE OPTION PATCH`
 - [ ] Mapeamento de Rotas
