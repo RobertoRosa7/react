@@ -26,8 +26,8 @@
 ###### 16/11/2020
 
 - [x] Novo Projeto My Money App
-- [ ] Configurando Servidor com Express Módule
-- [ ] Conexão com Banco de dados MongoDB
+- [x] Configurando Servidor com Express Módule
+- [x] Conexão com Banco de dados MongoDB
 - [ ] Mapeamento Objeto-Documento (ODM)
 - [ ] Criação da API Rest
 - [ ] HTTP Methods `GET POST PUT DELETE OPTION PATCH`
