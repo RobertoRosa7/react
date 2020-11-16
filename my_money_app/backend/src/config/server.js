@@ -7,3 +7,5 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.listen(PORT, () => console.log(`Server is running on: ${PORT}`));
+
+module.exports = app;

@@ -29,8 +29,8 @@
 - [x] Configurando Servidor com Express Módule
 - [x] Conexão com Banco de dados MongoDB
 - [x] Mapeamento Objeto-Documento (ODM)
-- [ ] Criação da API Rest
-- [ ] HTTP Methods `GET POST PUT DELETE OPTION PATCH`
+- [x] Criação da API Rest
+- [x] HTTP Methods `GET POST PUT DELETE OPTION PATCH`
 - [ ] Mapeamento de Rotas
 - [ ] Habilitando CORS
 - [ ] Middleware
