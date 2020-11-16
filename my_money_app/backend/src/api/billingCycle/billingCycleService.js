@@ -1,7 +1,9 @@
 const BillingCycle = require("./billingCycle");
+const errorsHandler = require("../common/errorsHandler");
 
 BillingCycle.methods(["get", "post", "put", "delete"]);
 BillingCycle.updateOptions({ new: true, runValidators: true });
+BillingCycle.after("post", errorsHandler).after("put", errorsHandler);
 
 BillingCycle.route("get", (req, res, next) => {
   BillingCycle.find({}, (err, docs) => {
