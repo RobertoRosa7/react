@@ -7,7 +7,11 @@ mongoose.Promise = global.Promise;
 // });
 
 // Mongoose 4.13.19
-module.exports = mongoose.connect("mongodb://localhost/mymoney", {
+// module.exports = mongoose.connect("mongodb://localhost/mymoney", {
+//   useMongoClient: true,
+// });
+
+module.exports = mongoose.connect("mongodb://127.0.0.1/mymoney", {
   useMongoClient: true,
 });
 

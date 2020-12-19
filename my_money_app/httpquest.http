@@ -1,4 +1,4 @@
-@host = http://localhost:3003/api
+@host = http://127.0.0.1:3003/api
 
 GET {{host}}/billingCycles HTTP/1.1
 
