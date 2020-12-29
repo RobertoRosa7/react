@@ -32,5 +32,9 @@
 - [x] Criação da API Rest
 - [x] HTTP Methods `GET POST PUT DELETE OPTION PATCH`
 - [x] Mapeamento de Rotas
-- [ ] Habilitando CORS
-- [ ] Middleware
+- [x] Habilitando CORS
+- [x] Middleware
+
+###### 29/12/2020
+
+- [x] Iniciando projeto FrontEnd
