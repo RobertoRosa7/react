@@ -31,3 +31,4 @@
   - lodash@4.17.4
 
 - [x] Configurando Webpack config
+- [x] Criando dir public com index.html
