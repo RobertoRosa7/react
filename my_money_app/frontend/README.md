@@ -29,3 +29,5 @@
   - redux-promise@0.5.3
   - redux-thunk@2.1.0
   - lodash@4.17.4
+
+- [x] Configurando Webpack config
