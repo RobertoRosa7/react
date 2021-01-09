@@ -3,6 +3,7 @@
 ###### 29/12/2020
 
 - [x] Instalando dependência de desenvolvimento
+
   - webpack@1.14.0
   - webpack-dev-server@1.16.2
   - babel-core@6.22.1
@@ -32,3 +33,7 @@
 
 - [x] Configurando Webpack config
 - [x] Criando dir public com index.html
+
+###### 09/01/2021
+
+- [x] Component index e app
