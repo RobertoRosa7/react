@@ -38,3 +38,7 @@
 
 - [x] Component index e app
 - [x] Importando dependências do Admin-LTE mais classes CSS
+
+###### 10/01/2021
+
+- [x] Implementação do Header
