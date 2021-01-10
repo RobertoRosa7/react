@@ -37,3 +37,4 @@
 ###### 09/01/2021
 
 - [x] Component index e app
+- [x] Importando dependências do Admin-LTE mais classes CSS
