@@ -1,0 +1,6 @@
+/* custom css footer */
+.main-footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
