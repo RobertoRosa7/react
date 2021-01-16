@@ -44,6 +44,10 @@
 - [x] Implementação do Header
 - [x] Implementação do Menu e Sidaber
 - [x] Implementação do Menu item e Menu tree
+
+###### 16/01/2021
+
 - [x] Implemetação do Footer
 - [x] Nova estrutura de projeto
 - [x] Implementação de Routes
+- [x] Convertendo component funcional pra component de classe
