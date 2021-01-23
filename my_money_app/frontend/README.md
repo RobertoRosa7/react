@@ -51,3 +51,7 @@
 - [x] Nova estrutura de projeto
 - [x] Implementação de Routes
 - [x] Convertendo component funcional pra component de classe
+
+###### 23/01/2021
+
+- [x] Implementação do component grid usando bootstrap
