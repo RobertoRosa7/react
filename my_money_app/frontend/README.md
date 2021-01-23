@@ -57,3 +57,4 @@
 - [x] Implementação do component grid usando bootstrap
 - [x] Novo component de Grid bootstrasp
 - [x] Component Row, Component ValueBox, HardCode data
+- [x] Integrando e configurando a estrutura base do redux ao projeto
