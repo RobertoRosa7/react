@@ -55,3 +55,4 @@
 ###### 23/01/2021
 
 - [x] Implementação do component grid usando bootstrap
+- [x] Novo component de Grid bootstrasp
