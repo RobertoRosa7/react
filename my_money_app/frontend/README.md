@@ -64,3 +64,4 @@
 - [x] Integrando action dashboard
 - [x] Apply middleware
 - [x] Redux Promise
+- [x] Redux devTools

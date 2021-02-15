@@ -9,10 +9,12 @@ import { getSummary } from "../../actions/dashboard";
 class Dashboard extends React.Component {
   constructor(props) {
     super();
+    this.props = props
+    this.compomentWillMount()
   }
 
   compomentWillMount() {
-    this.props.getSummary();
+    this.props.getSummary()
   }
 
   formatToReal(num) {
