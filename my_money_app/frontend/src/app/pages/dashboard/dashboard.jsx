@@ -3,9 +3,16 @@ import Content from "../../components/content/content";
 import ContentHeader from "../../components/content-header/content-header";
 import ValueBox from "../../components/value-box/value-box";
 import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import { getSummary } from "../../actions/dashboard";
+
 class Dashboard extends React.Component {
   constructor(props) {
     super();
+  }
+
+  compomentWillMount() {
+    this.props.getSummary();
   }
 
   formatToReal(num) {
@@ -70,4 +77,7 @@ const mapStateToProps = (state) => ({
   summary: state.dashboard.summary,
 });
 
-export default connect(mapStateToProps)(Dashboard);
+const mapDispatchToProps = (dispatch) =>
+  bindActionCreators({ getSummary }, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);

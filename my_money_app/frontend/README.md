@@ -58,3 +58,9 @@
 - [x] Novo component de Grid bootstrasp
 - [x] Component Row, Component ValueBox, HardCode data
 - [x] Integrando e configurando a estrutura base do redux ao projeto
+
+###### 15/02/2021
+
+- [x] Integrando action dashboard
+- [x] Apply middleware
+- [x] Redux Promise
