@@ -65,3 +65,7 @@
 - [x] Apply middleware
 - [x] Redux Promise
 - [x] Redux devTools
+
+###### 16/02/2021
+
+- [x] Criando estrutura para ciclo de pagamento
