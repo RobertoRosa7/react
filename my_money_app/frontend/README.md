@@ -69,3 +69,7 @@
 ###### 16/02/2021
 
 - [x] Criando estrutura para ciclo de pagamento
+- [x] Criando tabs com redux
+- [x] Tab Header
+- [x] Tab Active
+- [x] Tab Action
