@@ -5,8 +5,16 @@ import Tabs from "../../components/tabs/tabs";
 import TabHeader from "../../components/tabs/tabHeader";
 import TabContent from "../../components/tabs/tabContent";
 import TabMenu from "../../components/tabs/tabMenu";
+import TabContents from "../../components/tabs/tabContents";
+import { selectTab, showTab } from "../../actions/tab-actions";
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
 
 class BillingCycles extends React.Component {
+  componentWillMount() {
+    this.props.selectTab("tabList");
+    this.props.showTab("tabList", "tabCreate");
+  }
   render() {
     return (
       <div>
@@ -19,12 +27,19 @@ class BillingCycles extends React.Component {
               <TabMenu label="Aleterar" icon="pencil" target="tabUpdate" />
               <TabMenu label="Excluir" icon="trash-o" target="tabDelete" />
             </TabHeader>
-            <TabContent>tab content</TabContent>
+            <TabContent>
+              <TabContents id="tabList">Listar</TabContents>
+              <TabContents id="tabCreate">Incluir</TabContents>
+              <TabContents id="tabUpdate">Alterar</TabContents>
+              <TabContents id="tabDelete">Excluir</TabContents>
+            </TabContent>
           </Tabs>
         </Content>
       </div>
     );
   }
 }
+const mapDispatchToProps = (dispatch) =>
+  bindActionCreators({ selectTab, showTab }, dispatch);
 
-export default BillingCycles;
+export default connect(null, mapDispatchToProps)(BillingCycles);

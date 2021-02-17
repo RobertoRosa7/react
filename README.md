@@ -38,3 +38,30 @@
 ###### 29/12/2020
 
 - [x] Iniciando projeto FrontEnd
+
+###### 23/01/2021
+
+- [x] Implementação do component grid usando bootstrap
+- [x] Novo component de Grid bootstrasp
+- [x] Component Row, Component ValueBox, HardCode data
+- [x] Integrando e configurando a estrutura base do redux ao projeto
+
+###### 15/02/2021
+
+- [x] Integrando action dashboard
+- [x] Apply middleware
+- [x] Redux Promise
+- [x] Redux devTools
+
+###### 16/02/2021
+
+- [x] Criando estrutura para ciclo de pagamento
+- [x] Criando tabs com redux
+- [x] Tab Header
+- [x] Tab Active
+- [x] Tab Action
+
+###### 17/02/2021
+
+- [x] Selecionando conteúdo do tab select
+- [x] Show tabs
