@@ -66,3 +66,4 @@
 - [x] Selecionando conteúdo do tab select
 - [x] Show tabs
 - [x] Criando Actions List e Reducer
+- [x] Exibindo dados na lista

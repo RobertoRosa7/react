@@ -6,6 +6,8 @@ import TabHeader from "../../components/tabs/tabHeader";
 import TabContent from "../../components/tabs/tabContent";
 import TabMenu from "../../components/tabs/tabMenu";
 import TabContents from "../../components/tabs/tabContents";
+import List from "../../components/list/list";
+
 import { selectTab, showTab } from "../../actions/tab-actions";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
@@ -28,7 +30,9 @@ class BillingCycles extends React.Component {
               <TabMenu label="Excluir" icon="trash-o" target="tabDelete" />
             </TabHeader>
             <TabContent>
-              <TabContents id="tabList">Listar</TabContents>
+              <TabContents id="tabList">
+                <List />
+              </TabContents>
               <TabContents id="tabCreate">Incluir</TabContents>
               <TabContents id="tabUpdate">Alterar</TabContents>
               <TabContents id="tabDelete">Excluir</TabContents>
