@@ -1,21 +1,21 @@
-import React from "react";
-import ContentHeader from "../../components/content-header/content-header";
-import Content from "../../components/content/content";
-import Tabs from "../../components/tabs/tabs";
-import TabHeader from "../../components/tabs/tabHeader";
-import TabContent from "../../components/tabs/tabContent";
-import TabMenu from "../../components/tabs/tabMenu";
-import TabContents from "../../components/tabs/tabContents";
-import List from "../../components/list/list";
-
-import { selectTab, showTab } from "../../actions/tab-actions";
-import { bindActionCreators } from "redux";
-import { connect } from "react-redux";
+import React from "react"
+import ContentHeader from "../../components/content-header/content-header"
+import Content from "../../components/content/content"
+import Tabs from "../../components/tabs/tabs"
+import TabHeader from "../../components/tabs/tabHeader"
+import TabContent from "../../components/tabs/tabContent"
+import TabMenu from "../../components/tabs/tabMenu"
+import TabContents from "../../components/tabs/tabContents"
+import List from "../../components/list/list"
+import FormBillingCycles from '../../components/form-billingcycles/form-billingcycles'
+import { selectTab, showTab } from "../../actions/tab-actions"
+import { bindActionCreators } from "redux"
+import { connect } from "react-redux"
 
 class BillingCycles extends React.Component {
   componentWillMount() {
-    this.props.selectTab("tabList");
-    this.props.showTab("tabList", "tabCreate");
+    this.props.selectTab("tabList")
+    this.props.showTab("tabList", "tabCreate")
   }
   render() {
     return (
@@ -33,17 +33,19 @@ class BillingCycles extends React.Component {
               <TabContents id="tabList">
                 <List />
               </TabContents>
-              <TabContents id="tabCreate">Incluir</TabContents>
+              <TabContents id="tabCreate">
+                <FormBillingCycles />
+              </TabContents>
               <TabContents id="tabUpdate">Alterar</TabContents>
               <TabContents id="tabDelete">Excluir</TabContents>
             </TabContent>
           </Tabs>
         </Content>
       </div>
-    );
+    )
   }
 }
 const mapDispatchToProps = (dispatch) =>
-  bindActionCreators({ selectTab, showTab }, dispatch);
+  bindActionCreators({ selectTab, showTab }, dispatch)
 
-export default connect(null, mapDispatchToProps)(BillingCycles);
+export default connect(null, mapDispatchToProps)(BillingCycles)
