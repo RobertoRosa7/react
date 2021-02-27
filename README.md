@@ -72,3 +72,4 @@
 
 * [x] Integrando react form ao decorator
 * [x] Integrando chamada ao endpoint de novo cadastro
+* [x] Tratando de errors, novo component de mensagem toastr
