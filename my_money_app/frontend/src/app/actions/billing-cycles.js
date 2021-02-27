@@ -5,3 +5,8 @@ export const getList = () => ({
   type: "[BILLING_CYCLES_FETCHED]",
   payload: axios.get(`${API}/billingCycles`),
 });
+
+export const create = (values) => ({
+  type: "[BILLING_CYCLES_CREATED]",
+  payload: axios.post(`${API}/billingCycles`, values),
+})
