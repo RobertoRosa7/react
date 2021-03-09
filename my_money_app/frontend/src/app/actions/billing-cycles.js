@@ -26,17 +26,21 @@ export const create = (values) => {
         toastr.success('Sucesso', 'Operação realizado com sucesso.')
 
         // dispatch([]) array somente com redux-mult
-        dispatch([resetForm('form-billing-cycles'), getList(), selectTab('tabList'),
-        showTab('tabList', 'tabCreate')])
+        dispatch(init())
       })
       .catch(e => e.response.data.errors.forEach(e => toastr.error('Error', e)))
   }
 }
 
-export const showUpdate = (billingCycle) => {
-  return [
-    showTab('tabUpdate'),
-    selectTab('tabUpdate'),
-    initialize('form-billing-cycles', billingCycle)
-  ]
-}
+export const showUpdate = (billingCycle) => [
+  showTab('tabUpdate'),
+  selectTab('tabUpdate'),
+  initialize('form-billing-cycles', billingCycle)
+]
+
+export const init = () => [
+  showTab('tabList', 'tabCreate'),
+  selectTab('tabList'),
+  getList(),
+  initialize('form-billing-cycles', {})
+]
