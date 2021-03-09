@@ -25,4 +25,4 @@ class FormBillingCycles extends React.Component {
   }
 }
 
-export default reduxForm({ form: 'form-billing-cycles' })(FormBillingCycles)
+export default reduxForm({ form: 'form-billing-cycles', destroyOnUnmount: false })(FormBillingCycles)

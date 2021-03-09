@@ -4,12 +4,10 @@
 
 * [x] Backend App Todo
 * [x] NodeJS Settings Server
-
-  + Middlewares
-  + Starting Server
-
+* [x] Middlewares
+* [x] Starting Server
 * [x] Database Settings
-  + Mongoose
+* [x] Mongoose
 
 ###### 05/11/2020
 
@@ -74,3 +72,9 @@
 * [x] Integrando chamada ao endpoint de novo cadastro
 * [x] Tratando de errors, novo component de mensagem toastr
 * [x] Multi dispatch
+
+###### 09/03/2021
+
+* [x] Field com component personalizado
+* [x] Exibir aba de alterar cilco de pagamento
+* [x] Inicializar form com dados
