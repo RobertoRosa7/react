@@ -83,3 +83,6 @@
 ###### 13/03/2021
 
 * [x] Method update
+* [x] Method delete
+* [x] Change label and color button
+* [x] Corrigindo CSS

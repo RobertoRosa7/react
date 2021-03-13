@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { getList, showUpdate } from "../../actions/billing-cycles";
+import { getList, showUpdate, showDelete } from "../../actions/billing-cycles";
 import { bindActionCreators } from "redux";
 
 class List extends React.Component {
@@ -16,6 +16,7 @@ class List extends React.Component {
             <th>Nome</th>
             <th>Mẽs</th>
             <th>Ano</th>
+            <th className="table-custom-size-row">Ações</th>
           </tr>
         </thead>
         <tbody>
@@ -28,6 +29,9 @@ class List extends React.Component {
                 <button className="btn btn-warning" onClick={() => this.props.showUpdate(bc)}>
                   <i className="fa fa-pencil"></i>
                 </button>
+                <button className="btn btn-danger" onClick={() => this.props.showDelete(bc)}>
+                  <i className="fa fa-trash"></i>
+                </button>
               </td>
             </tr>
           ))}
@@ -39,6 +43,6 @@ class List extends React.Component {
 
 const mapStateToProps = (state) => ({ list: state.billing_cycles.list });
 const mapDispatchToProps = (dispatch) =>
-  bindActionCreators({ getList, showUpdate }, dispatch);
+  bindActionCreators({ getList, showUpdate, showDelete }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(List);

@@ -4,3 +4,9 @@
   justify-content: center;
   width: 100%;
 }
+.table-custom-size-row {
+  width: 150px;
+}
+button {
+  margin-left: 8px;
+}

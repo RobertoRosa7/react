@@ -20,11 +20,18 @@ export const getList = () => ({
 
 export const create = (values) => submit(values, 'post')
 export const update = (values) => submit(values, 'put')
+export const del = (values) => submit(values, 'delete')
 
 
 export const showUpdate = (billingCycle) => [
   showTab('tabUpdate'),
   selectTab('tabUpdate'),
+  initialize('form-billing-cycles', billingCycle)
+]
+
+export const showDelete = (billingCycle) => [
+  showTab('tabDelete'),
+  selectTab('tabDelete'),
   initialize('form-billing-cycles', billingCycle)
 ]
 
