@@ -86,3 +86,5 @@
 * [x] Method delete
 * [x] Change label and color button
 * [x] Corrigindo CSS
+* [x] Component Credit list
+* [x] Component input
