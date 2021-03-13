@@ -79,3 +79,7 @@
 * [x] Exibir aba de alterar cilco de pagamento
 * [x] Inicializar form com dados
 * [x] Botão cancelar
+
+###### 13/03/2021
+
+* [x] Method update

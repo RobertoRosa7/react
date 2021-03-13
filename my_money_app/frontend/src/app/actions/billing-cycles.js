@@ -18,19 +18,9 @@ export const getList = () => ({
 //     .catch(e => e.response.data.errors.forEach(e => toastr.error('Error', e)))
 // })
 
-// method action mult
-export const create = (values) => {
-  return dispatch => {
-    axios.post(`${API}/billingCycles`, values)
-      .then(() => {
-        toastr.success('Sucesso', 'Operação realizado com sucesso.')
+export const create = (values) => submit(values, 'post')
+export const update = (values) => submit(values, 'put')
 
-        // dispatch([]) array somente com redux-mult
-        dispatch(init())
-      })
-      .catch(e => e.response.data.errors.forEach(e => toastr.error('Error', e)))
-  }
-}
 
 export const showUpdate = (billingCycle) => [
   showTab('tabUpdate'),
@@ -44,3 +34,18 @@ export const init = () => [
   getList(),
   initialize('form-billing-cycles', {})
 ]
+
+// method action mult
+const submit = (values, method) => {
+  return dispatch => {
+    const id = values._id ? values._id : ''
+    axios[method](`${API}/billingCycles/${id}`, values)
+      .then(() => {
+        toastr.success('Sucesso', 'Operação realizado com sucesso.')
+
+        // dispatch([]) array somente com redux-mult
+        dispatch(init())
+      })
+      .catch(e => e.response.data.errors.forEach(e => toastr.error('Error', e)))
+  }
+}
