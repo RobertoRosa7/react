@@ -4,7 +4,7 @@ import { initialize } from 'redux-form'
 import { selectTab, showTab } from '../actions/tab-actions'
 
 const API = "http://127.0.0.1:3003/api"
-const INITIAL_VALUES = { credits: [{}] }
+const INITIAL_VALUES = { credits: [{}], debits: [{}] }
 
 export const getList = () => ({
   type: "[BILLING_CYCLES_FETCHED]",
@@ -50,10 +50,8 @@ const submit = (values, method) => {
     axios[method](`${API}/billingCycles/${id}`, values)
       .then(() => {
         toastr.success('Sucesso', 'Operação realizado com sucesso.')
-
-        // dispatch([]) array somente com redux-mult
-        dispatch(init())
+        dispatch(init())// dispatch([]) array somente com redux-mult
       })
-      .catch(e => e.response.data.errors.forEach(e => toastr.error('Error', e)))
+      .catch(e => e.response.data.errors.forEach(err => toastr.error('Error', err)))
   }
 }

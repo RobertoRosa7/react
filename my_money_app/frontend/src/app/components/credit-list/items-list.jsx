@@ -1,21 +1,22 @@
 import React from 'react'
-import Grid from '../grid/grid'
-import { Field, arrayInsert, arrayRemove } from 'redux-form'
-import Input from './input'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import { arrayInsert, arrayRemove, Field } from 'redux-form'
+import Grid from '../grid/grid'
+import Input from './input'
+import If from '../../components/if/if'
 
 class ItemsList extends React.Component {
 
   add(index, item = {}) {
     if (!this.props.readOnly) {
-      this.props.arrayInsert('form-billing-cycles', 'credits', index, item)
+      this.props.arrayInsert('form-billing-cycles', this.props.field, index, item)
     }
   }
 
   remove(index) {
     if (!this.props.readOnly && this.props.list.length > 1) {
-      this.props.arrayRemove('form-billing-cycles', 'credits', index)
+      this.props.arrayRemove('form-billing-cycles', this.props.field, index)
     }
   }
 
@@ -24,11 +25,16 @@ class ItemsList extends React.Component {
     return list.map((value, index) => (
       <tr key={index}>
         <td>
-          <Field name={`credits[${index}.name]`} component={Input} placeholder="Informe o nome" readOnly={this.props.readOnly} />
+          <Field name={`${this.props.field}[${index}.name]`} component={Input} placeholder="Informe o nome" readOnly={this.props.readOnly} />
         </td>
         <td>
-          <Field name={`credits[${index}.value]`} component={Input} placeholder="Informe o valor" readOnly={this.props.readOnly} />
+          <Field name={`${this.props.field}[${index}.value]`} component={Input} placeholder="Informe o valor" readOnly={this.props.readOnly} />
         </td>
+        <If test={this.props.showStatus}>
+          <td>
+            <Field name={`${this.props.field}[${index}.status]`} component={Input} placeholder="Informe o status" readOnly={this.props.readOnly} />
+          </td>
+        </If>
         <td>
           <button onClick={() => this.add(index + 1)} type="button" className="btn btn-success">
             <i className="fa fa-plus"></i>
@@ -47,15 +53,16 @@ class ItemsList extends React.Component {
     return (
       <Grid cols={this.props.cols}>
         <fieldset>
-          <legend>Creditos</legend>
+          <legend>{this.props.legend}</legend>
           <table className="table">
             <thead>
               <tr>
                 <th>Nome</th>
                 <th>Valor</th>
-                <th style={{
-                  display: 'flex'
-                }}>Ações</th>
+                <If test={this.props.showStatus}>
+                  <th>Status</th>
+                </If>
+                <th className="table-actions">Ações</th>
               </tr>
             </thead>
             <tbody>
