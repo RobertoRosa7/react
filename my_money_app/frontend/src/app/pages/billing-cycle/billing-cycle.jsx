@@ -1,21 +1,20 @@
 import React from "react"
+import { connect } from "react-redux"
+import { bindActionCreators } from "redux"
+import { create, del, update, init } from '../../actions/billing-cycles'
 import ContentHeader from "../../components/content-header/content-header"
 import Content from "../../components/content/content"
-import Tabs from "../../components/tabs/tabs"
-import TabHeader from "../../components/tabs/tabHeader"
-import TabContent from "../../components/tabs/tabContent"
-import TabMenu from "../../components/tabs/tabMenu"
-import TabContents from "../../components/tabs/tabContents"
-import List from "../../components/list/list"
 import FormBillingCycles from '../../components/form-billingcycles/form-billingcycles'
-import { selectTab, showTab } from "../../actions/tab-actions"
-import { bindActionCreators } from "redux"
-import { connect } from "react-redux"
-import { create, update, del } from '../../actions/billing-cycles'
+import List from "../../components/list/list"
+import TabContent from "../../components/tabs/tabContent"
+import TabContents from "../../components/tabs/tabContents"
+import TabHeader from "../../components/tabs/tabHeader"
+import TabMenu from "../../components/tabs/tabMenu"
+import Tabs from "../../components/tabs/tabs"
+
 class BillingCycles extends React.Component {
   componentWillMount() {
-    this.props.selectTab("tabList")
-    this.props.showTab("tabList", "tabCreate")
+    this.props.init()
   }
   render() {
     return (
@@ -51,6 +50,6 @@ class BillingCycles extends React.Component {
 }
 
 const mapDispatchToProps = (dispatch) =>
-  bindActionCreators({ selectTab, showTab, create, update, del }, dispatch)
+  bindActionCreators({ create, update, del, init }, dispatch)
 
 export default connect(null, mapDispatchToProps)(BillingCycles)

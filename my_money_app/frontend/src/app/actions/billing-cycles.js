@@ -1,9 +1,10 @@
 import axios from "axios"
 import { toastr } from 'react-redux-toastr'
-import { initialize, reset as resetForm } from 'redux-form'
+import { initialize } from 'redux-form'
 import { selectTab, showTab } from '../actions/tab-actions'
 
 const API = "http://127.0.0.1:3003/api"
+const INITIAL_VALUES = { credits: [{}] }
 
 export const getList = () => ({
   type: "[BILLING_CYCLES_FETCHED]",
@@ -39,7 +40,7 @@ export const init = () => [
   showTab('tabList', 'tabCreate'),
   selectTab('tabList'),
   getList(),
-  initialize('form-billing-cycles', {})
+  initialize('form-billing-cycles', INITIAL_VALUES)
 ]
 
 // method action mult
