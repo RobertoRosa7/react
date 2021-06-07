@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { init } from '../../actions/billing-cycles'
 import ItemsList from '../credit-list/items-list'
+import Summary from '../summary/summary'
 
 class FormBillingCycles extends React.Component {
   constructor(props) {
@@ -23,6 +24,7 @@ class FormBillingCycles extends React.Component {
             placeholder="Informe o mês" cols="12 4" />
           <Field readOnly={readOnly} name="year" component={LabelInput} label="Ano" type="number"
             placeholder="Informe o ano" cols="12 4" />
+          <Summary credits={100} debits={50} />
           <ItemsList cols="12 10" list={credits} readOnly={readOnly} field="credits" legend="Créditos" />
           <ItemsList cols="12 10" list={debits} readOnly={readOnly} field="debits" legend="Débitos" showStatus={true} />
         </div>
