@@ -45,6 +45,7 @@ export const init = () => [
 
 // method action mult
 const submit = (values, method) => {
+  console.log(values)
   return dispatch => {
     const id = values._id ? values._id : ''
     axios[method](`${API}/billingCycles/${id}`, values)

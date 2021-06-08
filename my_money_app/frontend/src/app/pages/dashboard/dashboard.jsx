@@ -29,27 +29,27 @@ class Dashboard extends React.Component {
   }
 
   render() {
-    const { credit, debt } = this.props.summary;
+    const { credits, debits } = this.props.summary;
     const cards = [
       {
         cols: "12 4",
         color: "green",
         icon: "bank",
-        value: `R$ ${this.formatToReal(credit)}`,
+        value: `R$ ${this.formatToReal(credits)}`,
         text: "Total de créditos",
       },
       {
         cols: "12 4",
         color: "red",
         icon: "credit-card",
-        value: `R$ ${this.formatToReal(debt)}`,
+        value: `R$ ${this.formatToReal(debits)}`,
         text: "Total de débitos",
       },
       {
         cols: "12 4",
         color: "blue",
         icon: "money",
-        value: `R$ ${this.formatToReal(this.calcConsolidado(credit, debt))}`,
+        value: `R$ ${this.formatToReal(this.calcConsolidado(credits, debits))}`,
         text: "Valor consolidado",
       },
     ];

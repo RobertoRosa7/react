@@ -12,9 +12,17 @@ class FormBillingCycles extends React.Component {
     super(props)
     this.props = props
   }
+  calculateSummary() {
+    return {
+      sumOfCredits: this.props.credits.map((c) => +c.value || 0).reduce((t, v) => t + v),
+      sumOfDebits: this.props.debits.map((d) => +d.value || 0).reduce((t, v) => t + v)
+    }
+  }
 
   render() {
     const { handleSubmit, readOnly, credits, debits } = this.props
+    const { sumOfCredits, sumOfDebits } = this.calculateSummary()
+
     return (
       <form role="form" onSubmit={handleSubmit}>
         <div className="box-body">
@@ -24,7 +32,7 @@ class FormBillingCycles extends React.Component {
             placeholder="Informe o mês" cols="12 4" />
           <Field readOnly={readOnly} name="year" component={LabelInput} label="Ano" type="number"
             placeholder="Informe o ano" cols="12 4" />
-          <Summary credits={100} debits={50} />
+          <Summary credits={sumOfCredits} debits={sumOfDebits} />
           <ItemsList cols="12 10" list={credits} readOnly={readOnly} field="credits" legend="Créditos" />
           <ItemsList cols="12 10" list={debits} readOnly={readOnly} field="debits" legend="Débitos" showStatus={true} />
         </div>
