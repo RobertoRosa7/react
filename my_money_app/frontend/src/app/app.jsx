@@ -1,17 +1,17 @@
-import "./app-dependencies"
 import React from "react"
-import Header from "./components/header/header"
-import Sidebar from "./components/sidebar/sidebar"
+import "./app-dependencies"
 import Footer from "./components/footer/footer"
-import Routes from "./routes/route"
+import Header from "./components/header/header"
 import Messages from './components/notification/massage'
+import Sidebar from "./components/sidebar/sidebar"
 
 export default (props) => (
   <main className="wrapper">
     <Header />
     <Sidebar />
     <section className="content-wrapper">
-      <Routes />
+      {/* <Routes /> */}
+      {props.children}
     </section>
     <Footer />
     <Messages />
