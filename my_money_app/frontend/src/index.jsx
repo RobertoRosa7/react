@@ -8,6 +8,7 @@ import thunk from 'redux-thunk'
 import rootReducers from "./app/reducers/root"
 import Routes from './app/routes/route'
 
+
 const devTools =
   window.__REDUX_DEVTOOLS_EXTENSION__ &&
   window.__REDUX_DEVTOOLS_EXTENSION__()
